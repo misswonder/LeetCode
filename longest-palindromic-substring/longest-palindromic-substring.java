@@ -2,29 +2,21 @@ import java.util.*;
 
 class Solution {
     public String longestPalindrome(String s) {
-        int maxStart = 0;
-        int maxEnd = 1;
         int start = 0;
-        int end = s.length();
+        int length = 1;
         
-        while (start < s.length()) {
-            if (
-                (end - start) > (maxEnd - maxStart) &&
-                isPalindrome(s.substring(start, end))
-            ) {
-                maxStart = start;
-                maxEnd = end;
-            }
-            
-            if (end > start + 1) {
-                end--;
-            } else {
-                start++;
-                end = s.length();
+        for (int i = 0; i < s.length(); i++) {
+            for (int j = i + length + 1; j <= s.length(); j++) {
+                if (
+                    isPalindrome(s.substring(i, j))
+                ) {
+                    start = i;
+                    length = j - i;
+                }
             }
         }
         
-        return s.substring(maxStart, maxEnd);
+        return s.substring(start, start + length);
     }
     
     public boolean isPalindrome(String s) { 
