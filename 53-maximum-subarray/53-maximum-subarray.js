@@ -5,20 +5,20 @@
 
 var maxSubArray = function(nums) {
     
-    let max = nums[0];
-    let sum = nums[0];
+    let maxSub = nums[0];
+    let currSum = nums[0];
     
     for (let i = 1; i < nums.length; i++) {
-        if (sum < 0) {
-            sum = nums[i];
+        if (currSum < 0) {
+            currSum = nums[i];
         } else {
-            sum += nums[i];
+            currSum += nums[i];
         }
         
-        if (sum > max) {
-            max = sum;
+        if (currSum > maxSub) {
+            maxSub = currSum;
         }
     }
     
-    return max;
+    return maxSub;
 };
