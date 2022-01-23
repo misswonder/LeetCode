@@ -3,7 +3,7 @@
  * @return {number}
  */
 
-var maxSubArray = function(nums) {
+function maxSubArray(nums) {
     
     let maxSub = nums[0];
     let currSum = nums[0];
