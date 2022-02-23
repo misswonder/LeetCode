@@ -20,5 +20,5 @@ var twoSum = function(numbers, target) {
         }      
     }
     
-    return [];
+    // return [];
 };
