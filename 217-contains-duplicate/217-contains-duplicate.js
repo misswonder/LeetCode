@@ -2,9 +2,7 @@
  * @param {number[]} nums
  * @return {boolean}
  */
-function containsDuplicate(nums) {
-    let newNums = new Set(nums);
-    return newNums.size !== nums.length;
+var containsDuplicate = function(nums) {
+    const newSet = new Set(nums);
+    return newSet.size !== nums.length;
 };
-
-
