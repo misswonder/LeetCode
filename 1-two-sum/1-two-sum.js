@@ -5,15 +5,17 @@
  */
 var twoSum = function(nums, target) {
     
-    let map = new Map();
+    // {value, index} //
+    let hash = {}; 
     
-    for (i=0; i<nums.length; i++) {
-        if(map.has(target - nums[i])) {
-            return [map.get(target - nums[i]), i]
+    for (let i=0; i<nums.length; i++) {
+        let n = nums[i];
+        let diff = target - n;
+        if(hash[diff] !== undefined) {
+            return [hash[diff], i];
         } else {
-            map.set(nums[i] , i)
+            hash[n] = i;
         }
     }
-    
-    return [];
+    return [];   
 };
