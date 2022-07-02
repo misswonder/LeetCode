@@ -1,24 +1,27 @@
 class Solution {
     public boolean isAnagram(String s, String t) {
         
-        if(s.length() != t.length()) {
+        if (s.length() != t.length()) {
             return false;
         }
         
-        int[] alphabet = new int[26];
+        // covert both strings to arrays
+        char[] charArr1 = s.toCharArray();
         
-        for (int i=0; i<s.length(); i++) {
-            alphabet[s.charAt(i) - 'a']++;
-            alphabet[t.charAt(i) - 'a']--; 
-        }
+        // sort the arrays from a-z
+        Arrays.sort(charArr1);
         
-        for (int n:alphabet) {
-            if(n!=0) {
-                return false;
-            }
-        }
+        // create new strings to hold the values of the sroted arrays
+        String s1 = new String(charArr1);
         
-        return true;        
+        
+        char[] charArr2 = t.toCharArray();
+        Arrays.sort(charArr2);
+        String t1 = new String(charArr2);
+        
+        // compare two strings, if they are equal, they are anagrams of each other
+        return s1.equals(t1);
+        
     }
 }
 
