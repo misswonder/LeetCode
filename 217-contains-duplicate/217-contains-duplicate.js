@@ -4,5 +4,5 @@
  */
 var containsDuplicate = function(nums) {
     const newSet = new Set(nums);
-    return newSet.size !== nums.length;
+    return newSet.size !== nums.length; 
 };
