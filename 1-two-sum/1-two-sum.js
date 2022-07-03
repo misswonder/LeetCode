@@ -17,5 +17,5 @@ var twoSum = function(nums, target) {
             hash[n] = i;
         }
     }
-    // return [];   
+     return [];   
 };
