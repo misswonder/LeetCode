@@ -3,7 +3,6 @@
  * @return {boolean}
  */
 
-// method #1:
 var isPalindrome = function(s) {
   if (s.length === 0) {
     return true;
@@ -27,5 +26,3 @@ var isPalindrome = function(s) {
 
   return true;
 };
-
-// method #2:
