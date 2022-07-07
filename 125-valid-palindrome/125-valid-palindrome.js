@@ -8,7 +8,8 @@ var isPalindrome = function(s) {
     return true;
   }
 
-  const regex = /[\_\W]/g;
+  // const regex = /[\_\W]/g;
+    const regex = /[^a-z0-9$]/gi;
   const cleaned = [...s.toLowerCase().replace(regex, "")];
 
   let i = 0;
