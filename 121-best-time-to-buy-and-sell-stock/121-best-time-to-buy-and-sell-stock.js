@@ -2,15 +2,19 @@
  * @param {number[]} prices
  * @return {number}
  */
-function maxProfit(prices) {
-    let buy = prices[0];
-    let profit = 0; 
-    for (let i = 1; i < prices.length; i++) {
-          if(buy > prices[i]) {
-              buy = prices[i];
-          } else {
-              profit = Math.max(prices[i] - buy, profit)
-          }
+const maxProfit = (prices) => {
+  let left = 0; // Buy
+  let right = 1; // sell
+  let max_profit = 0;
+  while (right < prices.length) {
+    if (prices[left] < prices[right]) {
+      let profit = prices[right] - prices[left]; // our current profit
+
+      max_profit = Math.max(max_profit, profit);
+    } else {
+      left = right;
     }
-    return profit;         
+    right++;
+  }
+  return max_profit;
 };
