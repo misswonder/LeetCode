@@ -10,6 +10,7 @@ var search = function(nums, target) {
     
     while(l <= r) {
         let m = Math.floor((l + r) / 2);
+        
         if(nums[m] < target) {
             l = m + 1;
         } else if(nums[m] > target) {
