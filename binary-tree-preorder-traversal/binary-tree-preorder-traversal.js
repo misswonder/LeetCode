@@ -13,7 +13,7 @@
 var preorderTraversal = function(root) {
     
     if(!root) return [];
-    if(root.size === 1) return root.val;
+    if(root.length === 1) return root.val;
     
     let data = [];
     const traverse = (node) => {
