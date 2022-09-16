@@ -2,19 +2,29 @@
  * @param {number[]} prices
  * @return {number}
  */
-const maxProfit = (prices) => {
-  let left = 0; // Buy
-  let right = 1; // sell
-  let max_profit = 0;
-  while (right < prices.length) {
-    if (prices[left] < prices[right]) {
-      let profit = prices[right] - prices[left]; // our current profit
-
-      max_profit = Math.max(max_profit, profit);
-    } else {
-      left = right;
+var maxProfit = function(prices) {
+    
+    // let [left, right, max] = [0, 1, 0];
+    let left = 0;
+    let right = 1;
+    let max = 0;
+    
+    while (right < prices.length) {
+        
+        const canSlide = prices[right] <= prices[left];
+        
+        if (canSlide) {
+            left = right;
+        }
+        
+        const window = prices[right] - prices[left];
+        
+        max = Math.max(max, window);
+        right++;
     }
-    right++;
-  }
-  return max_profit;
+    
+    return max;
+    
 };
+
+
