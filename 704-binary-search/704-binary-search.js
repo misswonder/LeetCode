@@ -12,9 +12,11 @@ var search = function(nums, target) {
         let m = Math.floor((l + r) / 2);
         // let m = Math.floor(l + (r - l) / 2);
         
-        if(nums[m] < target) {
+        let guess = nums[m];
+        
+        if(guess < target) {
             l = m + 1;
-        } else if(nums[m] > target) {
+        } else if(guess > target) {
                 r = m - 1;          
         } else {
             return m;
