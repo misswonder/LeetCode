@@ -9,8 +9,8 @@ var search = function(nums, target) {
     let r = nums.length - 1;
     
     while(l <= r) {
-        // let m = Math.floor((l + r) / 2);
-        let m = Math.floor(l + (r - l) / 2);
+        let m = Math.floor((l + r) / 2);
+        // let m = Math.floor(l + (r - l) / 2);
         
         if(nums[m] < target) {
             l = m + 1;
