@@ -6,22 +6,23 @@
  * }
  */
 /**
- * @param {ListNode} l1
- * @param {ListNode} l2
+ * @param {ListNode} list1
+ * @param {ListNode} list2
  * @return {ListNode}
  */
-var mergeTwoLists = function(l1, l2) {
+var mergeTwoLists = function(list1, list2) {
     
-    if (!l1 || !l2) {
-        return l1 || l2;
+    if (!list1 || !list2) {
+        return list1 || list2;
     }
+    
     let node = null;
-    if (l1.val < l2.val) {
-        node = l1;
-        node.next = mergeTwoLists(l1.next, l2);
+    if (list1.val < list2.val) {
+        node = list1;
+        node.next = mergeTwoLists(list1.next, list2);
     } else {
-        node = l2;
-        node.next = mergeTwoLists(l1, l2.next);
+        node = list2;
+        node.next = mergeTwoLists(list1, list2.next);
     }
     return node;
     
