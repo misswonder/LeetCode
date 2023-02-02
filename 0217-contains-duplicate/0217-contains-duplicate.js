@@ -3,7 +3,7 @@
  * @return {boolean}
  */
 
-// Time 0(N), Space O(N)
+// Time 0(N) | Space O(N)
 
 var containsDuplicate = function(nums) {
     
