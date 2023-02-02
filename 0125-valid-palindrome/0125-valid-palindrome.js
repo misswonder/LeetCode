@@ -12,6 +12,7 @@ var isPalindrome = function(s) {
 //     }
     
 //     const s1 = s.replace(/[^a-z0-9)]/ig, "").toLowerCase();
+
 //     let l = 0;
 //     let r = s1.length - 1;
     
