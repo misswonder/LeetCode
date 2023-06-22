@@ -15,12 +15,12 @@ var reduce = function(nums, fn, init) {
     
     // return nums.reduce(fn, init);
     
-//     let res = init;
-//     for (let i=0; i < nums.length; i++) {
-//         res = fn(res, nums[i]);
-//     }
+    let res = init;
+    for (let i=0; i < nums.length; i++) {
+        res = fn(res, nums[i]);
+    }
     
-//     return res;
+    return res;
     
 //     let res = init;
 //     for (const n of nums) {
@@ -29,11 +29,11 @@ var reduce = function(nums, fn, init) {
     
 //     return res;
     
-    let res= init;
-    nums.forEach((n) => {
-        res = fn(res, n);
-    })
+//     let res= init;
+//     nums.forEach((n) => {
+//         res = fn(res, n);
+//     })
     
-    return res;
+//     return res;
     
 };
