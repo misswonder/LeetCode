@@ -8,6 +8,9 @@ var filter = function(arr, fn) {
 // declarative programming
     // return arr.filter(fn);
     
+    // const n = "" ?? "Hello" //undefined
+    // const n = "" ? "" : "Hello";
+    
     // imperative programming
     const res = [];
      for (let i=0; i < arr.length; i++) {
