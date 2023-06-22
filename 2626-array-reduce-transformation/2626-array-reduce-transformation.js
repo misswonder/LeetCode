@@ -21,10 +21,17 @@ var reduce = function(nums, fn, init) {
     // }
     // return res;
     
+//     let res = init;
+//     for (const n of nums) {
+//         res = fn(res, n)
+//     }
+    
+//     return res;
+    
     let res = init;
-    for (const n of nums) {
-        res = fn(res, n)
-    }
+    nums.forEach((n) => {
+        res = fn(res, n);
+    })
     
     return res;
     
