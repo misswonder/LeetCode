@@ -21,4 +21,11 @@ var reduce = function(nums, fn, init) {
     }
     return res;
     
+//     let res = init;
+//     for (const n of nums) {
+//         res = fn(res, n)
+//     }
+    
+//     return res;
+    
 };
