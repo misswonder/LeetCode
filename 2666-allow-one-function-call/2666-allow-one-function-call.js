@@ -10,7 +10,7 @@ var once = function(fn) {
         }
         called = true;
         // return fn(...args);
-        return fn.apply(this,args);
+        return fn.apply(this, args);
     }
 };
 
