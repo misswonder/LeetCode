@@ -13,6 +13,7 @@ function memoize(fn) {
     }
 }
 
+// Decorator Design Pattern
 
 /** 
  * let callCount = 0;
