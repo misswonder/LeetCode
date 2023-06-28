@@ -15,8 +15,8 @@ var timeLimit = function(fn, t) {
             } catch(err) {
                 reject(err);
             } finally {
-                () => clearTimeout(id)
-            };
+                () => clearTimeout(id);
+            }
                         
         //     fn(...args)
         //         .then((res) => reslove(res))
