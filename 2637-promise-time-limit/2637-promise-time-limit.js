@@ -14,8 +14,10 @@ var timeLimit = function(fn, t) {
                 resolve(res);
             } catch(err) {
                 reject(err);
+            } finally {
+                () => clearTimeout(id)
             };
-            
+                        
         //     fn(...args)
         //         .then((res) => reslove(res))
         //         .catch((err) => reject(err))
